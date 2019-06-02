@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="giaodien.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="poster">
+        <img style="position:relative;top: 12px;left:1000px;" class="resize" src="images.jpg" alt="">
+        <div style="position:relative;top: 12px;right:300px;" class="box">
+            <h2 class="align_text_center">Vé máy bay</h2>
+            <div>
+                <h4><span class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                       Vé khứ hồi
+                    </label>
+                  </span>
+                </h4>  
+
+                <h4><span class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      Vé một chiều
+                    </label>
+                   </span>
+                </h4>   
+
+            </div>
+            
+            <h4><button  onclick="myFunction()" class="dropbtn" style="position:relative;left:100px;">Sân bay đi: &emsp; &nbsp;&nbsp; Hà Nội(HAN) ;&nbsp;&emsp;&emsp;&#8711;&nbsp; &nbsp;&nbsp; </button></h4>
+            <h4><button onclick="myFunction()" class="dropbtn" style="position:relative;left:100px;">Sân bay đến: &emsp; Hồ Chí Minh(HCM) &#8711;&emsp; </button></h4>
+                 
+            <!-- <h3 class="display" >Ngày đi: &emsp; </h3>  
+            <input id="datepicker" width="276" />
+                <script >
+                    $('#datepicker').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                </script> -->
+            
+            <h3 class ="boxfloat clear" >Ngày đi: &emsp; </h3><input class="boxfloat " id="datepicker" width="276" />
+                <script>
+                    $('#datepicker').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                </script>  
+                <p class="clear btn su" style="position:relative;top: 12px;"  ><b class="clear">Tra cứu âm lịch</b> </p>      
+                <h5 class="clear">
+                    <p class="  display " >Người lớn(>12 tuổi) &emsp; </p> 
+
+                    <p class="  display " >Trẻ em(2-12 tuổi) &emsp;&emsp; </p> 
+           
+                    <p class="  display  " >Em bé( <2 tuổi)</p> 
+                </h5>    
+                    
+                   
+               
+                <input id = "abcxyz" type = "number" placeholder="Nhap so nguoi " >    &emsp; 
+                <input id = "abcxyz" type = "number" placeholder="Nhap so nguoi">     &emsp;
+                <input id = "abcxyz" type = "number" placeholder="Nhap so nguoi">     
+                <button class="btm success" style="position:relative;top: 12px;left:220px;">
+                        <i class="em-svg em-mag_right"></i>
+                        <b><span>Tìm vé rẻ</span></b>
+                </button>
+                <h6 class="align_text_center " style="position:relative;top: 12px;  ">hoặc</h6>
+                <button class="btm success" style="position:relative;top: 12px;left:190px;">
+                    
+                        <h6><b>Tìm vé rẻ trong tháng</b></h6>
+                </button>
+              
+
+            
+                
+            
+        </div>
+    </div>
+</body>
+</html>

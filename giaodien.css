@@ -1,0 +1,76 @@
+.poster{
+    width: 100%;
+    height: 1000px;
+    
+    background-image: url(3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 700px;
+    /* background-position-x: 100px; */
+    display: flex;
+   
+} 
+.box{
+    width: 600px;
+    height: 550px;
+    background-color:  #4CAF50;
+    margin-left: 100px;
+    margin-top: 100px;
+    border-radius: 40px;
+
+
+}
+.align_text_center{
+    text-align: center;
+}
+.boxfloat{
+    float: left;
+}
+.clear{
+   
+    clear: left;
+}
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  
+  }
+
+.d-m{
+}
+
+.su {
+    border-color: rgba(248, 245, 34, 0.993);
+    
+    color: green;
+  }
+.bottom{
+    vertical-align: -100px;
+}  
+.display{
+    display: inline-block;
+   
+    /* display: flex; */
+    /* color: #4CAF50 */
+}
+.left{
+    text-align: left;
+}    
+.success {background-color: rgb(218, 40, 40);} /* Green */
+.success:hover {background-color: #46a049;}
+.btm {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    border-radius: 20px;
+    /* position: relative; left:200px;top:30px; */
+  }
+
+.resize{
+    width:270px;
+    height: 170px;
+}
