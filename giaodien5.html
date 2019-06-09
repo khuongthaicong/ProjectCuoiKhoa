@@ -4,24 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="giaodien.css">
+    <link rel="stylesheet" href="giaodien2.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="giaodien1.css">
     <title>Document</title>
 
 </head>
 <body>
-  <h3 class="boxfloat">Ngày đi: &emsp; </h3><input class="boxfloat" id="datepicker" width="276" />
-    <script>
-        $('#datepicker').datepicker({
-            uiLibrary: 'bootstrap4'
-        });
-    </script>
-  
-    <input id = "abcxyz" type = "number" placeholder="Nhap so nguoi">
-     
+    <div class="box1" >
+                <div style="position:relative;left:140px;">
+                     <b class="font_size">Bookin</b>
+                     <i class="em-svg em-mag_right font_size_40"> </i>
+                     <div class="font_size_20">Đặt vé trực tuyến</div>
+                     <img style="position:relative;bottom: 110px;left:800px;" class="resize1" src="images.png" alt="">
+                 </div>      
+                 <div style="position:relative;bottom:100px;">
+                     <div  class="topnav">
+                     <a class="active" href="#home">Vé máy bay</a>
+                     <a href="#news">Khách sạn</a>
+                     <a href="#contact">Tour du lịch</a>
+                     <a href="#about">Đăng nhập</a>
+                   </div>
+                  
+                 </div> 
+    </div>
     
+    <div class="box7" >
+            <div style="position:relative; top: 20px;">
+                    <span  >
+                            <b class="center circle float">1 </b>  
+                            <div class="float font_size_20">&emsp; Tìm vé,chọn vé &emsp;&emsp;&emsp;&emsp; </div>      
+                            <i class='fas fa-chevron-right float' style="font-size:30px">&emsp;&emsp;</i>   
+                        </span>
+                        <span >
+                            <b class="center circle float">2 </b>       
+                            <div class="float font_size_20">&emsp; Thông tin hành khách &emsp;&emsp;&emsp;&emsp; </div> 
+                            <i class='fas fa-chevron-right float' style="font-size:30px">&emsp;&emsp;</i>   
+                        </span>
+                        <span >
+                            <b class="center circle float">3 </b>     
+                            <div class="float font_size_20">&emsp; Thanh Toán &emsp;&emsp;&emsp;&emsp; </div>    
+                            <i class='fas fa-chevron-right float' style="font-size:30px"> &emsp;&emsp;</i>
+                            <!-- <div class="float">&emsp;</div>     -->
+                        </span>
+                        <span >
+                            <b class="center circle float">4 </b>   
+                            <div class="float font_size_20">&emsp; Hoàn Tất </div>                 
+                        </span>
+                        
+            </div>
+    </div>
+    
+    <div class="box5 " style="position:relative;left:1000px;" >
+                <div class="box6"> 
+                        <b >&nbsp;Sắp xếp theo</b>
+                </div>
+                <form action="">
+                   
+                    <input type="radio" name="gender" value="male"> Giá(Thấp đến cao)<br>
+                    <input type="radio" name="gender" value="female"> Giờ cất cánh<br>
+                    
+                </form>   
+    </div>
+    
+   
 </body>
 </html>

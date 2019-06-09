@@ -1,0 +1,57 @@
+.box1{
+    width: 100%;
+    height: 200px;
+    background-color: antiquewhite;
+    background-attachment: flex;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(241, 115, 92);
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 22px 100px;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+.font_size{
+    font-size: 55px;
+    font-family: initial
+}  
+.font_size_40{
+  font-size: 40px;
+}
+.font_size_20{
+  font-size: 20px;
+  color: crimson;
+}
+.resize1{
+    width: 230px;
+    height:130px;
+}
+
+  
+
+.white{
+  color:white;
+}
+.tag{
+  white-space: nowrap;
+}  
