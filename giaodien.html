@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <title>Document</title>
+    
+           
 </head>
+
 <body>
     <div class="box1" >
                 <div style="position:relative;left:140px;">
@@ -29,10 +32,37 @@
                      <a class="active" href="#home">Vé máy bay</a>
                      <a href="#news">Khách sạn</a>
                      <a href="#contact">Tour du lịch</a>
-                     <a href="#about">Đăng nhập</a>
-                   </div>
-                  
-                 </div> 
+                     <a href="#about">
+                            <div onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</div>
+                            <div id="id01" class="modal">
+                                <form class="modal-content animate"  >
+                                        <!-- <div class="imgcontainer">  
+                                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                <img src="tải xuống.png" alt="Avatar" class="avatar">
+                                        </div>   -->
+                                        <div class="containers">
+                                                <label for="uname" class="margin_left_0px;"><b>Username</b></label>
+                                                <input type="text" placeholder="Enter Username" name="uname" required class="input">
+                                                
+                                                <label for="psw"><b>Password</b></label>
+                                                <input type="password" placeholder="Enter Password" name="psw" required class="input">
+
+                                                <button class="button" type="submit">Login</button>
+                                                <label>
+                                                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                                                </label>
+                                        </div>  
+                                        <div class="containers" style="background-color:#f1f1f1">
+                                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn button" style="position:relative;right:180px;">Cancel</button>
+                                                <div style="position:relative;bottom:40px; left:140px;">Forgot <u style="color:blue;"> Password</u> </div>
+                                              </div>
+                                </form>
+                            </div>
+        
+                         
+
+                     </a>
+                   
     </div>
     <div class="poster" >
             
@@ -141,13 +171,18 @@
                     
                    
                
-                <input id = "abcxyz" type = "number" placeholder="Nhap so nguoi " >    &emsp; 
+                <input id = "abcxyz" type = "number" placeholder="Nhap so nguoi"  >    &emsp; 
                 <input id = "abcxyz" type = "number" placeholder="Nhap so nguoi">     &emsp;
                 <input id = "abcxyz" type = "number" placeholder="Nhap so nguoi">     
-                <button class="btm success" style="position:relative;top: 12px;left:220px;">
+                <button  type="button" class="btm success" style="position:relative;top: 12px;left:220px;" onclick="dieu_huong()" >
                         <i class="em-svg em-mag_right"></i>
-                        <b><span>Tìm vé rẻ</span></b>
+                        <b>Tìm vé rẻ</b>
                 </button>
+                <script>
+                    function dieu_huong(){
+                        location.assign("giaodien2.html")
+                    }
+                </script>
                 <h6 class="align_text_center " style="position:relative;top: 12px;  ">hoặc</h6>
                 <button class="btm success" style="position:relative;top: 12px;left:190px;">
                     
