@@ -59,7 +59,7 @@
 .left{
     text-align: left;
 }    
-.success {background-color: rgb(218, 40, 40);} /* Green */
+.success {background-color: rgba(228, 17, 17, 0.877);} /* Green */
 .success:hover {background-color: #46a049;}
 .btm {
     border: none; /* Remove borders */
