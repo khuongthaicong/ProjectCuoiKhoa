@@ -20,13 +20,8 @@
   font-family: 'Oswald', sans-serif;
   color: #272A33;
   font-size: 25px;
-  font-stretch: extra-expanded;
 }
-.plane{
-  position:relative;
-  margin-right: 20px;
-  resize: both;
-}
+
 .tab-navigation {
   position:relative;
   top: 30px;
