@@ -1,3 +1,25 @@
+function showDatepicker() {
+    $("#roundtrip").datepicker('show');
+}
+function setDate(date) {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+
+    var yyyy = today.getFullYear();
+    if (dd < 10) { dd = '0' + dd }
+    if (mm < 10) { mm = '0' + mm }
+    today = yyyy + '-' + mm + '-' + dd;
+
+    $(date).val(today);
+}
+
+var nowDate = new Date();
+var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
+$("#datepicker").datepicker({
+    startDate: nowDate
+});
+
 function getdata() {
     var depAirport = document.getElementById("departure-airport");
     depUser = depAirport.options[depAirport.selectedIndex].text;
@@ -9,25 +31,14 @@ function getdata() {
     var child = document.getElementById("child").value;
     var adult = document.getElementById("adult").value;
 
-    var today = new Date();
-    console.log(today)
-    // if ($("#datepicker").datepicker().val() ="") {
-    //     // check xem user đã chọn ngày chưa
-    //     document.getElementById("date-check").innerHTML = "Bạn chưa chọn ngày!";
-    // }
-    // else if ($("#datepicker").datepicker("getDate") - today < 0) { 
-    //     //check xem user có chọn mấy ngày trong quá khứ không
-    //     document.getElementById("date-check").innerHTML = "Bạn phải chọn ngày "
-    // }
-    // else if (){
-    //     //dành cho vé khứ hồi: check xem hiệu ngày đi - ngày về có lớn hơn 0 không
-    //     document.getElementById("date-check").innerHTML = 
-    // }
-    // else {
-    //     var departureDate = $("#datepicker").datepicker({ dateFormat: 'dd,mm,yyyy' }).val();
-    // }
+    // var today = new Date();
+    // var dd = String(today.getDate()).padStart(2, '0');
+    // var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    // var yyyy = today.getFullYear();
+    // today = mm + '/' + dd + '/' + yyyy;
 
-
+    var departureDate = $("#datepicker").datepicker({ dateFormat: 'dd,mm,yyyy' }).val();
+    console.log(departureDate)
     if (document.getElementById("oneway").checked == true) {
         for (let i = 0; i < onewayticket.length; i++) {
             if (onewayticket[i]["d-place"] == depUser && onewayticket[i]["a-place"] == arrUser) {
@@ -57,6 +68,12 @@ function getdata() {
         }
     }
     else {
-        document.getElementById("ticket-check").innerHTML = "You have to choose the ticket type";
+        document.getElementById("ticket-check").innerHTML = "Bạn phải chọn loại vé";
+    }
+    var ticket_type = document.getElementsByName("ticket")
+    for (let i = 0; i < ticket_type.length; i++) {
+        if (ticket_type[i].checked) {
+            parent.open("file:///E:/GitHub/ProjectCuoiKhoa/giaodien2.html")
+        }
     }
 }

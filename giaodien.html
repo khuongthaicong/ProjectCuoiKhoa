@@ -43,210 +43,225 @@
                         </div>
                 </div>
         </div>
-        <div class="poster">
-                <img style="position:relative;top: 120px;left:1000px;" class="resize" src="images.jpg" alt="">
-                <div style="position:relative;top: 12px;right:300px;" class="bookingbox">
-                        <h2 class="align_text_center">Vé máy bay</h2>
-                        <div class="font">
-                                <form action="">
-                                        <input type="radio" name="ticket" id = "oneway" value="oneway" class="ticket"> Vé một
-                                        chiều<br>
-                                        <input type="radio" name="ticket" id = "roundtrip" value="roundtrip" class="ticket"> Vé khứ
-                                        hồi<br>
-                                        <div id="ticket-check"></div>
-                                </form>
-                        </div>
-                        <div class="airport">
-                                <div class="input-group mb-3">
-                                        <label class="input-group-prepend">
-                                                <button class="input-group-text" for="inputGroupSelect01">Sân bay
-                                                        đi</button>
-                                        </label>
-                                        <select class="custom-select" id="departure-airport">
-                                                <option selected>Hà Nội</option>
-                                                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
-                                                <option value="Cần Thơ">Cần Thơ</option>
-                                                <option value="Côn Đảo">Côn Đảo</option>
-                                                <option value="Đà Lạt">Đà Lạt</option>
-                                                <option value="Đà Nẵng">Đà Nẵng</option>
-                                                <option value="Hải Phòng">Hải Phòng</option>
-                                                <option value="Huế">Huế</option>
-                                                <option value="Nha Trang">Nha Trang</option>
-                                                <option value="Phú Quốc">Phú Quốc</option>
-                                                <option value="Quy Nhơn">Quy Nhơn</option>
-                                                <option value="Tam Kỳ">Tam Kỳ</option>
-                                                <option value="Thanh Hóa">Thanh Hóa</option>
-                                        </select>
-                                </div>
-                                <div class="input-group mb-3">
-                                        <label class="input-group-prepend">
-                                                <button class="input-group-text" for="inputGroupSelect01">Sân bay
-                                                        về</button>
-                                        </label>
-                                        <select class="custom-select" id="arrival-airport">
-                                                <option selected>Hồ Chí Minh</option>
-                                                <option value="Hà Nội">Hà Nội</option>
-                                                <option value="CT">Cần Thơ</option>
-                                                <option value="CĐ">Côn Đảo</option>
-                                                <option value="ĐL">Đà Lạt</option>
-                                                <option value="ĐN">Đà Nẵng</option>
-                                                <option value="HP">Hải Phòng</option>
-                                                <option value="Huế">Huế</option>
-                                                <option value="NT">Nha Trang</option>
-                                                <option value="PQ">Phú Quốc</option>
-                                                <option value="QN">Quy Nhơn</option>
-                                                <option value="TK">Tam Kỳ</option>
-                                                <option value="TT">Thanh Hóa</option>
-                                        </select>
-                                </div>
-                        </div>
-                        <div>
-                                <h3 class="boxfloat clear">Ngày đi: &emsp; </h3>
-                                <input class="boxfloat " id="datepicker" width="276" />
-                                <script>
-                                        $('#datepicker').datepicker({
-                                                uiLibrary: 'bootstrap4'
-                                        });
-                                </script>
-                                <div id = "date-check"></div>
-                        </div>
+        <div class="container">
+                <div class="poster">
+                        <div class="bookingbox">
+                                <div class="booking-content">
+                                        <div class="search-title">Vé máy bay</div>
+                                        <div class="ticket-type">
+                                                <div class="col-left">
+                                                        <input type="radio" name="ticket" id="oneway" value="oneway"
+                                                                class="ticket"> Vé một chiều
+                                                </div>
+                                                <div class="col-right">
+                                                        <input type="radio" name="ticket" id="roundtrip"
+                                                                value="roundtrip" class="ticket"
+                                                                onclick="showDatepicker()"> Vé khứ hồi
+                                                </div>
+                                                <div id="ticket-check"></div>
+                                                <br>
+                                        </div>
+                                        <div class="airport">
+                                                <div class="input-group mb-3">
+                                                        <label class="input-group-prepend">
+                                                                <button class="input-group-text"
+                                                                        for="inputGroupSelect01">Sân
+                                                                        bay
+                                                                        đi</button>
+                                                        </label>
+                                                        <select class="custom-select" id="departure-airport">
+                                                                <option selected>Hà Nội</option>
+                                                                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                                                <option value="Cần Thơ">Cần Thơ</option>
+                                                                <option value="Côn Đảo">Côn Đảo</option>
+                                                                <option value="Đà Lạt">Đà Lạt</option>
+                                                                <option value="Đà Nẵng">Đà Nẵng</option>
+                                                                <option value="Hải Phòng">Hải Phòng</option>
+                                                                <option value="Huế">Huế</option>
+                                                                <option value="Nha Trang">Nha Trang</option>
+                                                                <option value="Phú Quốc">Phú Quốc</option>
+                                                                <option value="Quy Nhơn">Quy Nhơn</option>
+                                                                <option value="Tam Kỳ">Tam Kỳ</option>
+                                                                <option value="Thanh Hóa">Thanh Hóa</option>
+                                                        </select>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                        <label class="input-group-prepend">
+                                                                <button class="input-group-text"
+                                                                        for="inputGroupSelect01">Sân
+                                                                        bay
+                                                                        về</button>
+                                                        </label>
+                                                        <select class="custom-select" id="arrival-airport">
+                                                                <option selected>Hồ Chí Minh</option>
+                                                                <option value="Hà Nội">Hà Nội</option>
+                                                                <option value="CT">Cần Thơ</option>
+                                                                <option value="CĐ">Côn Đảo</option>
+                                                                <option value="ĐL">Đà Lạt</option>
+                                                                <option value="ĐN">Đà Nẵng</option>
+                                                                <option value="HP">Hải Phòng</option>
+                                                                <option value="Huế">Huế</option>
+                                                                <option value="NT">Nha Trang</option>
+                                                                <option value="PQ">Phú Quốc</option>
+                                                                <option value="QN">Quy Nhơn</option>
+                                                                <option value="TK">Tam Kỳ</option>
+                                                                <option value="TT">Thanh Hóa</option>
+                                                        </select>
+                                                </div>
+                                        </div>
+                                        <div class="date">
+                                                <div class="col-left date-search">
+                                                        <div class="pull-left w25">
+                                                                <span class="departure-date">Ngày đi</span>
+                                                        </div>
+                                                        <div class="pull-left datepicker-size">
+                                                                <input class="boxfloat " id="datepicker" />
+                                                                <script>
+                                                                        $('#datepicker').datepicker({
+                                                                                uiLibrary: 'bootstrap4'
+                                                                        });
+                                                                </script>
+                                                        </div>
+                                                </div>
+                                                <div id="date-check"></div>
+                                        </div>
+                                        <div class="clear quantity">
+                                                <div class="adult clear">
+                                                        <label for="adult"> Người lớn <i> (>12 tuổi) </i></label>
+                                                        <input id="adult" type="number" placeholder="Nhập số người">
+                                                </div>
+                                                <div class="child clear">
+                                                        <label for="child"> Trẻ em <i> (2-12 tuổi) </i></label>
+                                                        <input id="child" type="number" placeholder="Nhập số người">
+                                                </div>
+                                                <div class="baby clear">
+                                                        <label for="baby"> Em bé <i> (< 2 tuổi) </i> </label> 
+                                                        <input id="baby" type="number" placeholder="Nhập số người">
+                                                </div>
+                                        </div>
+                                        <div>
+                                                <submit onclick="getdata()" id="find-ticket" class="btm submit">
+                                                        <i class="em-svg em-mag_right"></i>
+                                                        <b><span> Tìm vé </span> </b>
+                                                </submit>
+                                        </div>
 
-                        <div class="clear margin_top">
-                                <p class="age">Người lớn (lớn hơn 12 tuổi) </p>
-                                <input id="adult" type="number" placeholder="Nhập số người">
-                                <p class="age">Trẻ em (từ 2 - 12 tuổi) </p>
-                                <input id="child" type="number" placeholder="Nhập số người">
-                                <p class="age"> Em bé (nhỏ hơn 2 tuổi) </p>
-                                <input id="baby" type="number" placeholder="Nhập số người">
+                                </div>
                         </div>
-                        <div>
-                                <submit onclick="getdata()" id="find-ticket" class="btm success" style="position:relative;top: 12px;left:220px;">
-                                        <i class="em-svg em-mag_right"></i>
-                                        <b><span> Tìm vé </span></b>
-                                </submit>
-                        </div>
+                </div>
+        </div>
+        <div class="font_size_n box4" style="position:relative;top:120px">
+                <h2>Hình thức chuyển khoản</h2>
+                <p>Hỗ trợ 4 phương án thanh toán</p>
+                <hr color="white">
+                <span>
+                        <i class="em-svg em-dollar"></i>
+                        <b>Thanh Toán tại quầy</b>
+                        <p class="font_size_n2" style="position:relative;left:40px;">483fsfsdf </p>
+                        <hr>
+                </span>
+                <span>
+                        <i class="em-svg em-house"></i>
+                        <b>Thanh Toán tại nhà</b>
+                        <p class="font_size_n2" style="position:relative;left:40px;">Nhân viên
+                                giao vé sẽ gửi vé và thu tiền tận nhà khách hàng</p>
+                        <hr>
+                </span>
+                <span>
+                        <i class="em-svg em-atm"></i>
+                        <b>Thanh Toán qua ATM</b>
+                        <p class="font_size_n2" style="position:relative;left:40px;">Khách hàng
+                                thanh toán qua ATM theo số tài khoản</p>
+                        <hr>
+                </span>
+                <span>
+                        <i class="em-svg em-credit_card"></i>
+                        <b>Thanh Toán qua chuyển khoản</b>
+                        <p class="font_size_n2" style="position:relative;left:40px;">Khách hàng
+                                chuyển khoản qua online banking </p>
+
+                </span>
+        </div>
+        <div class="font_size_n align_text_center  box3" style="position:relative;bottom:480px;left:700px">
+                <h1>Tại sao chọn Bookin?</h1>
+                <div>
+                        <span>
+                                <i class="em-svg em-moneybag"></i>
+                                <i>Đảm bảo giá tốt nhất</i>
+                        </span>
+                </div>
+                <div>
+                        <span>
+                                <i class="em-svg em-gift"></i>
+                                <i>Luôn có khuyến mại và quà tặng</i>
+                        </span>
 
                 </div>
                 <div>
-                        <div class="font_size_n box4" style="position:relative;top:120px">
-                                <h2>Hình thức chuyển khoản</h2>
-                                <p>Hỗ trợ 4 phương án thanh toán</p>
-                                <hr color="white">
-                                <span>
-                                        <i class="em-svg em-dollar"></i>
-                                        <b>Thanh Toán tại quầy</b>
-                                        <p class="font_size_n2" style="position:relative;left:40px;">483fsfsdf </p>
-                                        <hr>
-                                </span>
-                                <span>
-                                        <i class="em-svg em-house"></i>
-                                        <b>Thanh Toán tại nhà</b>
-                                        <p class="font_size_n2" style="position:relative;left:40px;">Nhân viên
-                                                giao vé sẽ gửi vé và thu tiền tận nhà khách hàng</p>
-                                        <hr>
-                                </span>
-                                <span>
-                                        <i class="em-svg em-atm"></i>
-                                        <b>Thanh Toán qua ATM</b>
-                                        <p class="font_size_n2" style="position:relative;left:40px;">Khách hàng
-                                                thanh toán qua ATM theo số tài khoản</p>
-                                        <hr>
-                                </span>
-                                <span>
-                                        <i class="em-svg em-credit_card"></i>
-                                        <b>Thanh Toán qua chuyển khoản</b>
-                                        <p class="font_size_n2" style="position:relative;left:40px;">Khách hàng
-                                                chuyển khoản qua online banking </p>
-
-                                </span>
-                        </div>
-                        <div class="font_size_n align_text_center  box3"
-                                style="position:relative;bottom:480px;left:700px">
-                                <h1>Tại sao chọn Bookin?</h1>
-                                <div>
-                                        <span>
-                                                <i class="em-svg em-moneybag"></i>
-                                                <i>Đảm bảo giá tốt nhất</i>
-                                        </span>
-                                </div>
-                                <div>
-                                        <span>
-                                                <i class="em-svg em-gift"></i>
-                                                <i>Luôn có khuyến mại và quà tặng</i>
-                                        </span>
-
-                                </div>
-                                <div>
-                                        <span>
-                                                <i class="em-svg em-airplane"></i>
-                                                <i>Tìm kiếm linh hoạt dễ dàng</i>
-                                        </span>
-                                </div>
-                                <div>
-                                        <span>
-                                                <i class="em-svg em-bell"></i>
-                                                <i>Dịch vụ tin cậy,giá trị đích thực</i>
-                                        </span>
-
-                                </div>
-                                <div>
-                                        <span>
-                                                <i class="em-svg em-star"></i>
-                                                <i>Hỗ trợ tận tình-chu đáo 24/7</i>
-                                        </span>
-
-                                </div>
-                                <div>
-                                        <span>
-                                                <i class="em-svg em-ok_hand"></i>
-                                                <i>Thanh toán dễ dàng,đa dạng</i>
-                                        </span>
-
-                                </div>
-                        </div>
-
+                        <span>
+                                <i class="em-svg em-airplane"></i>
+                                <i>Tìm kiếm linh hoạt dễ dàng</i>
+                        </span>
+                </div>
+                <div>
+                        <span>
+                                <i class="em-svg em-bell"></i>
+                                <i>Dịch vụ tin cậy,giá trị đích thực</i>
+                        </span>
 
                 </div>
+                <div>
+                        <span>
+                                <i class="em-svg em-star"></i>
+                                <i>Hỗ trợ tận tình-chu đáo 24/7</i>
+                        </span>
 
-                <div class="box2" style="position:relative;bottom:200px; right:220px;">
-                        <b class="font_size white" style="position:relative;top: 12px;left:220px;">Bookin</b>
-                        <i class="em-svg em-mag_right font_size_40" style="position:relative;top: 12px;left:220px;">
-                        </i>
-                        <b>
-                                <h4 class="white" style="position:relative;top: 12px;left:600px;"> <span class="tag">Trụ
-                                                sở Hà Nội &emsp;&emsp;&emsp;: </span></h4>
-                        </b>
-                        <h5 class="white" style="position:relative;bottom:20px;left:900px;">Tầng 2, toà nhà AD ,
-                                ngõ 11 Duy Tân, Cầu Giấy </h5>
-                        <b>
-                                <h4 class="white" style="position:relative;top: 12px;left:600px;"><span class="tag">VP
-                                                TP.HCM &nbsp;&emsp;&emsp;&emsp;&emsp;:</span>
-                                </h4>
-                        </b>
-                        <h5 class="white" style="position:relative;bottom:20px;left:900px;">Tầng 2, toà nhà AD ,
-                                ngõ 11 Duy Tân, Cầu Giấy </h5>
-                        <b>
-                                <h4 class="white" style="position:relative;top: 12px;left:600px;">VP Indesia
-                                        &nbsp; &emsp;&emsp;&emsp;&emsp;: </h4>
-                        </b>
-                        <h5 class="white" style="position:relative;bottom:20px;left:900px;">Tầng 2, toà nhà AD ,
-                                ngõ 11 Duy Tân, Cầu Giấy </h5>
-                        <b>
-                                <h4 class="white" style="position:relative;top: 12px;left:600px;">Điện thoại
-                                        &emsp;&emsp;&emsp;&emsp;&ensp;: </h4>
-                        </b>
-                        <h5 class="orange" style="position:relative;bottom:20px;left:900px;">(024) 38 363 7772
-                                (028) 3993 4231 </h5>
-                        <b>
-                                <h4 class="white" style="position:relative;top: 12px;left:600px;">Email
-                                        &ensp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;: </h4>
-                        </b>
-                        <h5 class="orange" style="position:relative;bottom:20px;left:900px;">Tầng 2, toà nhà AD
-                                , ngõ 11 Duy Tân, Cầu Giấy </h5>
-                        <img style="position:relative; bottom :50px;left:200px;" class="resize2" src="images (1).jpg"
-                                alt="">
+                </div>
+                <div>
+                        <span>
+                                <i class="em-svg em-ok_hand"></i>
+                                <i>Thanh toán dễ dàng,đa dạng</i>
+                        </span>
+
                 </div>
         </div>
+
+        <div class="box2" style="position:relative;bottom:200px; right:220px;">
+                <b class="font_size white" style="position:relative;top: 12px;left:220px;">Bookin</b>
+                <i class="em-svg em-mag_right font_size_40" style="position:relative;top: 12px;left:220px;">
+                </i>
+                <b>
+                        <h4 class="white" style="position:relative;top: 12px;left:600px;"> <span class="tag">Trụ
+                                        sở Hà Nội &emsp;&emsp;&emsp;: </span></h4>
+                </b>
+                <h5 class="white" style="position:relative;bottom:20px;left:900px;">Tầng 2, toà nhà AD ,
+                        ngõ 11 Duy Tân, Cầu Giấy </h5>
+                <b>
+                        <h4 class="white" style="position:relative;top: 12px;left:600px;"><span class="tag">VP
+                                        TP.HCM &nbsp;&emsp;&emsp;&emsp;&emsp;:</span>
+                        </h4>
+                </b>
+                <h5 class="white" style="position:relative;bottom:20px;left:900px;">Tầng 2, toà nhà AD ,
+                        ngõ 11 Duy Tân, Cầu Giấy </h5>
+                <b>
+                        <h4 class="white" style="position:relative;top: 12px;left:600px;">VP Indesia
+                                &nbsp; &emsp;&emsp;&emsp;&emsp;: </h4>
+                </b>
+                <h5 class="white" style="position:relative;bottom:20px;left:900px;">Tầng 2, toà nhà AD ,
+                        ngõ 11 Duy Tân, Cầu Giấy </h5>
+                <b>
+                        <h4 class="white" style="position:relative;top: 12px;left:600px;">Điện thoại
+                                &emsp;&emsp;&emsp;&emsp;&ensp;: </h4>
+                </b>
+                <h5 class="orange" style="position:relative;bottom:20px;left:900px;">(024) 38 363 7772
+                        (028) 3993 4231 </h5>
+                <b>
+                        <h4 class="white" style="position:relative;top: 12px;left:600px;">Email
+                                &ensp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;: </h4>
+                </b>
+                <h5 class="orange" style="position:relative;bottom:20px;left:900px;">Tầng 2, toà nhà AD
+                        , ngõ 11 Duy Tân, Cầu Giấy </h5>
+                <img style="position:relative; bottom :50px;left:200px;" class="resize2" src="images (1).jpg" alt="">
         </div>
         <script src="bookingdata.js"></script>
         <script src="booking.js"></script>
