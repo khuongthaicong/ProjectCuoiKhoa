@@ -1,3 +1,28 @@
+$('input[type=radio][name=ticket]').change(function showDatepicker() {
+    if (this.value == 'oneway') {
+        $("#roundtrip").datepicker("disable");
+    }
+    else if (this.value == 'roundtrip') {
+        $("#roundtrip").datepicker('show');
+    }
+});
+
+today = new Date();
+$(function () {
+    $('#datepicker').datepicker({
+        startDate: today,
+        format: "dd/mm/yyyy",
+        autoclose: true,
+        todayHighlight: true,
+        showOtherMonths: true,
+        selectOtherMonths: true,
+        autoclose: true,
+        changeMonth: true,
+        changeYear: true,
+        orientation: "button"
+    });
+});
+
 function getdata() {
     var depAirport = document.getElementById("departure-airport");
     depUser = depAirport.options[depAirport.selectedIndex].text;
@@ -9,25 +34,8 @@ function getdata() {
     var child = document.getElementById("child").value;
     var adult = document.getElementById("adult").value;
 
-    var today = new Date();
-    console.log(today)
-    // if ($("#datepicker").datepicker().val() ="") {
-    //     // check xem user đã chọn ngày chưa
-    //     document.getElementById("date-check").innerHTML = "Bạn chưa chọn ngày!";
-    // }
-    // else if ($("#datepicker").datepicker("getDate") - today < 0) { 
-    //     //check xem user có chọn mấy ngày trong quá khứ không
-    //     document.getElementById("date-check").innerHTML = "Bạn phải chọn ngày "
-    // }
-    // else if (){
-    //     //dành cho vé khứ hồi: check xem hiệu ngày đi - ngày về có lớn hơn 0 không
-    //     document.getElementById("date-check").innerHTML = 
-    // }
-    // else {
-    //     var departureDate = $("#datepicker").datepicker({ dateFormat: 'dd,mm,yyyy' }).val();
-    // }
-
-
+    var departureDate = $("#datepicker").datepicker({ dateFormat: 'dd,mm,yyyy' }).val();
+    console.log(departureDate)
     if (document.getElementById("oneway").checked == true) {
         for (let i = 0; i < onewayticket.length; i++) {
             if (onewayticket[i]["d-place"] == depUser && onewayticket[i]["a-place"] == arrUser) {
@@ -56,7 +64,10 @@ function getdata() {
             }
         }
     }
-    else {
-        document.getElementById("ticket-check").innerHTML = "You have to choose the ticket type";
+    var ticket_type = document.getElementsByName("ticket")
+    for (let i = 0; i < ticket_type.length; i++) {
+        if (ticket_type[i].checked) {
+            parent.open("file:///E:/GitHub/ProjectCuoiKhoa/giaodien2.html")
+        }
     }
 }

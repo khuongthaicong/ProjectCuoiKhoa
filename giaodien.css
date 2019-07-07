@@ -1,71 +1,53 @@
 .poster{
-  width: 100%;
-  height: 2000px;
-  
+  clear: top;
+  margin: left;
+  margin-top: 40px;
   background-image: url(3.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 700px;
-  /* background-position-x: 100px; */
-  display: flex; } 
+  background-size: cover;
+  display: flex;
+  height: 600px;
+  /* z-index: -1;    */
+  position: relative;
+} 
+
 
 .bookingbox{
-  width: 600px;
-  height: 550px;
-  background-color:  #4CAF50;
-  margin-left: 100px;
+  width: 500px;
+  height: 450px;
+  color: #272A33;
+  background-color:  #4BCCCC;
+  margin-left: 50px;
   margin-top: 100px;
-  border-radius: 40px; }
-
-.align_text_center{
+  border-radius: 8px; 
+}
+.booking-content {
+  margin-left: 5%;
+  font-size: 14px;
+}
+.search-title{
+  margin-top: 5px;
   text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-.boxfloat{
+.col-left {
   float: left;
-}
-.clear{
-   
-  clear: left;
-}
-.btn {
-  border: 2px solid black;
-  background-color: white;
-  color: black;
-  padding: 14px 28px;
+  width: 50%;
+  cursor: pointer;
   font-size: 16px;
-  cursor: pointer; }
-
-.su {
-  border-color: rgba(248, 245, 34, 0.993);
-  
-  color:#4BCCCC;
 }
-.bottom{
-  vertical-align: -100px;
-}  
-.age{
-  display: inline-block;
+.col-right {
+  float: right;
+  width: 50%;
+  cursor: pointer;
+  font-size: 16px;
 }
-.left{
-  text-align: left;
-}    
-.success {background-color: rgb(218, 40, 40);} /* Green */
-.success:hover {background-color: #4BCCCC;}
-
-.btm {
-    border: none; 
-    color: white; 
-    padding: 14px 28px; /* Add some padding */
-    cursor: pointer; /* Add a pointer cursor on mouse-over */
-    border-radius: 20px;
-    /* position: relative; left:200px;top:30px; */
-  }
-
-.resize{
-    width:270px;
-    height: 170px; }
 .airport {
   position: relative;
-  display: inline-block; }
+  display: inline-block; 
+  width: 95% }
 
 .airport-content {
   display: none;
@@ -77,48 +59,135 @@
   z-index: 1;
 }
 
-.airport:hover .dropright-content {
+.airport:hover .booking-content {
   display: block; }
-.font{
-  font-size: 23px;
-}
-.margin_top{
-    margin-top: 20px;
 
+.pull-left {
+  float: left;
 }
-.box2{
-  width: 2000px;
-  height:520px;
-  background-color: rgb(83, 83, 83);
+.w25 {
+  width: 25%
+}
+#datepicker {
+  width: 60%
+}
+.departure-date {
+  align-content: center;
+}
+.clear{
+  clear: left;
+  clear: top
+}
+.quantity{
+  display: inline-block;
+}
+.adult {
+  float: left;
+  width: 30%
+}
+.child {
+  float: left;
+  width: 30%;
+  margin-left: 4%;
+}
+.baby {
+  float: left;
+  width: 30%;
+  margin-left: 4%;
+}
+.placeholder {
+  width: 87%
+}
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer; }
 
+.bottom{
+  vertical-align: -100px;
+}  
+.left{
+  text-align: left;
+}    
+.quantity{
+  margin-top: 20px;  
+  width: 100%;
+  float: left;
 }
-.resize2 {
-  width: 200px;
-  height:80px; }
-.orange{
-  color:orangered;
+.date-search {
+  width: 50%
 }
-  .font_size_n{
+#datepicker {
+  cursor: pointer
+}
+
+#find-ticket {
+  bottom: 10px;
+}
+.submit {
+  background-color: #f9f9f9;
+  color: #272A33;
+  
+}
+.submit:hover {
+  background-color: #F05D23;
+  color: #f9f9f9
+}
+
+.btm {
+  border: none; 
+  padding: 12px 20px;/* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+  border-radius: 20px;
+}
+.center {
+  float: center;
+  left: 35%;
+}
+  .ck-title{
   font-size: 30px;
 }
-  .font_size_n1{
+  .ck-heading{
   font-size: 25px;
+}  
+  .ck-sub {
+    font-size: 18px
+  }
+.ck-info {
+  font-size: 16px;
+  position:relative;
+  left: 35px;
+  }
+.info {
+  float: left;
+  width: 100%;
+  position:relative;
+  top: 50px
 }
-  .font_size_n2{
-  font-size: 20px;
-  }  
-  .box3{
-  width:470px;
-  height:400px;
-  background-color: white;
-  }
-  .box4{
-  width:520px;
-  height:650px;
-  background-color: white;
-  }
+.ck{
+  float: left;
+  width: 40%;
+  margin-left: 5%;
+}
+.box3{
+  width: 40%;
+  margin-left: 5%;
+}
 
   #combine{
   flex-flow: row;
   justify-content: center;
   }
+.box2 {
+  top: 20px;
+  clear: top;
+  float: bottom;
+  width: 100%;
+  height: 600px;
+  /* margin-bottom: 0px; */
+  background-color: rgb(175, 198, 218);
+  margin-top: 25px;
+} 
